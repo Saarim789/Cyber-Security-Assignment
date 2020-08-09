@@ -1,0 +1,36 @@
+//
+//  main.cpp
+//  prog3
+//
+//  Created by saarim khan on 08/08/20.
+//  Copyright © 2020 saarim khan. All rights reserved.
+//
+
+#include <iostream>
+
+using namespace std;
+void Prime(int n)
+{
+    int j,c=0;
+    for(j=2;j<=n;j++)
+    {
+        if(n%j==0)
+        ++c;
+    }
+    if(c==1)
+    cout<<n<<",";
+}
+int main()
+{
+    int a,b;
+    cout<<"ENTER THE RANGE";
+    cin>>a>>b;
+    cout<<"PRIME NUMBERS ARE=";
+    for(int i=a+1;i<b;i++)
+    {if(i==1||i==0)
+            continue;
+        Prime(i);
+    }
+    return 0;
+}
+
